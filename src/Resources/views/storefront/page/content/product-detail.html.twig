@@ -1,0 +1,11 @@
+{% sw_extends '@Storefront/storefront/page/content/product-detail.html.twig' %}
+
+{% set examplePluginOptions = {
+    text: "WOW Are you not interested in this product?"
+} %}
+
+{% block cms_content %}
+    {{ parent() }}
+    ssdfsdfsdfsdfsdf
+    <template test-div data-first-plugin-options='{{ examplePluginOptions|json_encode }}'></template>
+{% endblock %}
