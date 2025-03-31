@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Attribute\Route;
 #[Route(defaults: ['_routeScope' => ['storefront']])]
 class MyController extends StorefrontController
 {
-    #[Route(path: '/test', name: 'frontend.my.test', methods: ['GET'])]
+    #[Route(path: '/test', name: 'frontend.my.test', defaults: ['_httpCache' => true], methods: ['GET'])]
     public function showTest(Request $request, SalesChannelContext $context): Response
     {
         return $this->renderStorefront('@SwagBasicExample/storefront/page/test.html.twig', [
