@@ -4,6 +4,7 @@ namespace Ihor\Storefront\Storefront\Controller;
 
 use Shopware\Core\System\SalesChannel\SalesChannelContext;
 use Shopware\Storefront\Controller\StorefrontController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
@@ -17,5 +18,11 @@ class MyController extends StorefrontController
         return $this->renderStorefront('@SwagBasicExample/storefront/page/test.html.twig', [
             'example' => 'Hello world'
         ]);
+    }
+
+    #[Route(path: '/ajax', name: 'frontend.my.ajax', defaults: ['XmlHttpRequest' => 'true'], methods: ['GET'])]
+    public function showAjax(): JsonResponse
+    {
+        return new JsonResponse(['timestamp' => (new \DateTime())->format(\DateTimeInterface::W3C)]);
     }
 }
