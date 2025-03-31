@@ -1,0 +1,22 @@
+{
+    "name": "ihor/storefront",
+    "description": "ihor/storefront",
+    "type": "shopware-platform-plugin",
+    "version": "1.0.0",
+    "license": "MIT",
+    "require": {
+        "shopware/core": "~6.6.0"
+    },
+    "extra": {
+        "shopware-plugin-class": "Ihor\\Storefront\\IhorStorefrontPlugin",
+        "label": {
+            "de-DE": "Storefront plugin",
+            "en-GB": "Storefront plugin"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Ihor\\Storefront\\": "src/"
+        }
+    }
+}
