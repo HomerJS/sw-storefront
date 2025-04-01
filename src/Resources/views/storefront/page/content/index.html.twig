@@ -19,4 +19,13 @@
 
     {# Using asset function to display our custom asset #}
     <img src="{{ asset('bundles/ihorstorefrontplugin/images.jpg', 'asset') }}">
+
+
+    {# We want to set our own icon here #}
+    <h1>Custom icon:</h1>
+    {% sw_icon 'checkmark' style {
+        'size': 'lg',
+        'pack': 'solid'
+    } %}
+    {{ parent() }}
 {% endblock %}
