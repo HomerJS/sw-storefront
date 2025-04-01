@@ -6,12 +6,18 @@
 
     <services>
         <service id="Ihor\Storefront\Storefront\Controller\MyController" public="true">
+            <argument type="service" id="Ihor\Storefront\Storefront\Page\Example\ExamplePageLoader" />
             <call method="setContainer">
                 <argument type="service" id="service_container"/>
             </call>
             <call method="setTwig">
                 <argument type="service" id="twig"/>
             </call>
+        </service>
+
+        <service id="Ihor\Storefront\Storefront\Page\Example\ExamplePageLoader" public="true">
+            <argument type="service" id="Shopware\Storefront\Page\GenericPageLoader" />
+            <argument type="service" id="event_dispatcher"/>
         </service>
     </services>
 </container>
