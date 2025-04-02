@@ -20,5 +20,9 @@
             <argument type="service" id="event_dispatcher"/>
             <argument type="service" id="Ihor\Storefront\Storefront\Pagelet\Example\ExamplePageletLoader"/>
         </service>
+
+        <service id="Ihor\Storefront\Storefront\Pagelet\Example\ExamplePageletLoader" public="true">
+            <argument type="service" id="event_dispatcher"/>
+        </service>
     </services>
 </container>
