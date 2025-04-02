@@ -18,6 +18,7 @@
         <service id="Ihor\Storefront\Storefront\Page\Example\ExamplePageLoader" public="true">
             <argument type="service" id="Shopware\Storefront\Page\GenericPageLoader" />
             <argument type="service" id="event_dispatcher"/>
+            <argument type="service" id="Ihor\Storefront\Storefront\Pagelet\Example\ExamplePageletLoader"/>
         </service>
     </services>
 </container>
