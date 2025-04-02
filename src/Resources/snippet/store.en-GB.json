@@ -1,0 +1,6 @@
+{
+  "header": {
+    "example": "Our example header"
+  },
+  "soldProducts": "Sold about %count% products in %country%"
+}

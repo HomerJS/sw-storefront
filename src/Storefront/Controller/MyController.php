@@ -9,12 +9,14 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 #[Route(defaults: ['_routeScope' => ['storefront']])]
 class MyController extends StorefrontController
 {
     public function __construct(
-        private readonly ExamplePageLoader $examplePageLoader
+        private readonly ExamplePageLoader $examplePageLoader,
+        private readonly TranslatorInterface $translator
     ) {
     }
 
@@ -37,8 +39,12 @@ class MyController extends StorefrontController
     {
         $page = $this->examplePageLoader->load($request, $context);
 
+        $a = $this->trans('header.example');
+        $b = $this->translator->trans('soldProducts', ['%count%' => 3, '%country%' => 'Germany']);
+
         return $this->renderStorefront('@IhorStorefrontPlugin/storefront/page/example/index.html.twig', [
-            'example' => 'Hello world',
+            'example1' => $a,
+            'example2' => $b,
             'page' => $page
         ]);
     }

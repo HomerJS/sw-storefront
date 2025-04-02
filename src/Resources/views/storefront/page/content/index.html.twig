@@ -28,4 +28,14 @@
         'pack': 'solid'
     } %}
     {{ parent() }}
+
+    <h2>TRANSLATIONS</h2>
+    <div class="product-detail-headline">
+        {{ 'header.example' | trans }}
+    </div>
+
+
+    <div class="product-detail-headline">
+        {{ 'soldProducts' | trans({'%count%': 3, '%country%': 'Germany'}) }}
+    </div>
 {% endblock %}
