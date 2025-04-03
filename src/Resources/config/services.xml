@@ -29,5 +29,14 @@
         <service id="Ihor\Storefront\Subscriber\ExampleListingSubscriber">
             <tag name="kernel.event_subscriber"/>
         </service>
+
+        <service id="Ihor\Storefront\Subscriber\AddDataToPageSubscriber">
+            <argument type="service" id="Ihor\Storefront\Core\Content\Example\SalesChannel\ProductCountRoute"/>
+            <tag name="kernel.event_subscriber"/>
+        </service>
+
+        <service id="Ihor\Storefront\Core\Content\Example\SalesChannel\ProductCountRoute" >
+            <argument type="service" id="product.repository"/>
+        </service>
     </services>
 </container>
