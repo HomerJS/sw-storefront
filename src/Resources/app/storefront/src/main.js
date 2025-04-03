@@ -11,4 +11,7 @@ window.PluginManager.register('FirstPlugin', () => import('./first-plugin/first-
 
 window.PluginManager.override('CookiePermission', () => import('./my-cookie-permission/my-cookie-permission.plugin'), '[data-cookie-permission]');
 
-import './reacting-cookie/reacting-cookie'
+import './reacting-cookie/reacting-cookie';
+
+window.PluginManager.register('EventsPlugin', () => import('./events-plugin/events-plugin.plugin'));
+// import './events-plugin/events-plugin.plugin';

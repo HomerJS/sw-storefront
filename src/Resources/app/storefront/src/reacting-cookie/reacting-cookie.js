@@ -7,8 +7,8 @@ function eventCallback(updatedCookies) {
     if (typeof updatedCookies.detail['cookie-key-1'] !== 'undefined') {
         // The cookie with the cookie attribute "cookie-key-1" either is set active or from active to inactive
 
-        alert('Not updated: ' + cookieActive);
+        console.log('Not updated: ' + cookieActive);
     } else {
-        alert('Updated: ' + cookieActive);
+        console.log('Updated: ' + cookieActive);
     }
 }
