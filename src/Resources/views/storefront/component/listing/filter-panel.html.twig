@@ -1,0 +1,24 @@
+{% sw_extends '@Storefront/storefront/component/listing/filter-panel.html.twig' %}
+
+{% block component_filter_panel_items %}
+    {{ parent() }}
+    {{ dump(listing.aggregations.elements) }}
+
+    {% sw_include '@Storefront/storefront/component/listing/filter/filter-multi-select.html.twig' with {
+        name: 'myFilter',
+        displayName: 'myFilterDisplayname1',
+        elements: [
+            {
+                'id': '0',
+                'translated' : {'name':'name1'}
+            },
+            {
+                'id': '0.170',
+                'translated' : {'name':'name2'}
+            }
+        ],
+        sidebar: false,
+        ariaLabel: 'arialabel'
+    } %}
+
+{% endblock %}

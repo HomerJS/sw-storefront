@@ -11,7 +11,7 @@ export default class FirstPlugin extends PluginBaseClass {
 
     onScroll() {
         if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-            alert(this.options.text);
+            // alert(this.options.text);
         }
     }
 }
