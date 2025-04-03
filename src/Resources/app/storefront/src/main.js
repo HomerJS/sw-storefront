@@ -10,3 +10,5 @@ window.PluginManager.register('AjaxLoadPlugin', AjaxLoadPlugin, '[data-ajax-help
 window.PluginManager.register('FirstPlugin', () => import('./first-plugin/first-plugin.plugin'), '[test-div]');
 
 window.PluginManager.override('CookiePermission', () => import('./my-cookie-permission/my-cookie-permission.plugin'), '[data-cookie-permission]');
+
+import './reacting-cookie/reacting-cookie'
