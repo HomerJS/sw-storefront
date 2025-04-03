@@ -7,11 +7,19 @@ export default class FirstPlugin extends PluginBaseClass {
 
     init() {
         window.addEventListener('scroll', this.onScroll.bind(this));
+        this.fetchData();
     }
 
     onScroll() {
         if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
             // alert(this.options.text);
         }
+    }
+
+    async fetchData() {
+        const response = await fetch('/ajax');
+        const data = await response.text();
+
+        console.log(data);
     }
 }
