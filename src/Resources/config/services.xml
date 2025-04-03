@@ -38,5 +38,9 @@
         <service id="Ihor\Storefront\Core\Content\Example\SalesChannel\ProductCountRoute" >
             <argument type="service" id="product.repository"/>
         </service>
+
+        <service id="Ihor\Storefront\Framework\Cookie\CustomCookieProvider" decorates="Shopware\Storefront\Framework\Cookie\CookieProviderInterface">
+            <argument type="service" id="Ihor\Storefront\Framework\Cookie\CustomCookieProvider.inner" />
+        </service>
     </services>
 </container>
