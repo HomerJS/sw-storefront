@@ -72,4 +72,31 @@
 
     Pseudo Modal Utility
     <template pseudo-modal></template>
+
+    <h1>DATEPICKER</h1>
+    {% set pickerOptions = {
+        locale: app.request.locale,
+        enableTime: false,
+        noCalendar: false,
+        dateFormat: "Y-m-d H:i",
+        selectors: {
+            openButton: ".openDatePicker",
+            closeButton: ".closeDatePicker",
+            clearButton: ".resetDatePicker"
+        }
+    } %}
+
+    <label>
+        <input type="text"
+               name="customDate"
+               class="customDate"
+               value="2021-01-01T00:00:00+00:00"
+               data-date-picker
+               data-date-picker-options="{{ pickerOptions|json_encode|escape('html_attr') }}"
+        />
+        <button class="openDatePicker">Open</button>
+        <button class="closeDatePicker">Close</button>
+        <button class="resetDatePicker">Reset</button>
+    </label>
+
 {% endblock %}
