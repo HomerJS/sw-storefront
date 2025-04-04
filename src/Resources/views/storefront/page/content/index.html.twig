@@ -99,4 +99,9 @@
         <button class="resetDatePicker">Reset</button>
     </label>
 
+    <h1>New function</h1>
+
+    {% set md5Hash = createMd5Hash('Shopware is awesome') %}
+    {{ md5Hash }}
+
 {% endblock %}
