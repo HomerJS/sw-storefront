@@ -14,4 +14,6 @@ window.PluginManager.override('CookiePermission', () => import('./my-cookie-perm
 import './reacting-cookie/reacting-cookie';
 
 window.PluginManager.register('EventsPlugin', () => import('./events-plugin/events-plugin.plugin'));
-// import './events-plugin/events-plugin.plugin';
+
+//REMOVE JS PLUGIN
+window.PluginManager.deregister('OffCanvasCart', '[data-off-canvas-cart]');
