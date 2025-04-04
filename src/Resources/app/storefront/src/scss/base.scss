@@ -4,3 +4,8 @@ body {
   background:  $sw-storefront-assets-color-background;
 }
 
+$sass-plugin-header-bg-color: #ffcc00 !default;
+
+.header-main {
+  background-color: $sass-plugin-header-bg-color;
+}
