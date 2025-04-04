@@ -17,3 +17,9 @@ window.PluginManager.register('EventsPlugin', () => import('./events-plugin/even
 
 //REMOVE JS PLUGIN
 window.PluginManager.deregister('OffCanvasCart', '[data-off-canvas-cart]');
+
+
+//PseudoModalPlugin
+import PseudoModalPlugin from './pseudo-modal/pseudo-modal.plugin';
+
+window.PluginManager.register('PseudoModalPlugin', PseudoModalPlugin, '[pseudo-modal]');
